@@ -7,8 +7,9 @@ A plugin for Unreal to implement a simple day/night cycle, complete with seasona
 - Recommended: Enable Virtual Textures
 
 ## Usage
+Copy the Simple_DayNight folder into your project's Plugins folder. Re-generate project files for your project and build.
 
-Simply drag and drop the DayNightController into your level (or create a blueprint subclass of the DayNightController and drag and drop that into your level).
+In-editor, simply drag and drop the DayNightController into your level (or create a blueprint subclass of the DayNightController and drag and drop that into your level).
 
 ### Settings
 
