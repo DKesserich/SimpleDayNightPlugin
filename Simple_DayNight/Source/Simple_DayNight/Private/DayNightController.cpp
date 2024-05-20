@@ -88,7 +88,7 @@ ADayNightController::ADayNightController(const FObjectInitializer& ObjectInitial
 	LengthOfDay = CVarDayLength.GetValueOnAnyThread();
 	SteppedTimeRate = CVarStepRate.GetValueOnAnyThread();
 
-	//Load the config to overwrite any properties that have been saved in the local SimpleDayNight.ini
+	//Load the config to overwrite any properties that aren't defaults
 	LoadConfig();
 
 	//Update Sun and Star positions for the loaded properties.
@@ -126,6 +126,13 @@ void ADayNightController::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//Update CVars to match locally overridden values.
+	//For some reason in a build this will throw an exception and crash if done in PostInitProperties()
+	CVarSmoothTime.AsVariable()->Set(SmoothTime, ECVF_SetByProjectSetting);
+	CVarSeasonLength.AsVariable()->Set(SeasonLength, ECVF_SetByProjectSetting);
+	CVarDayLength.AsVariable()->Set(LengthOfDay, ECVF_SetByProjectSetting);
+	CVarStepRate.AsVariable()->Set(SteppedTimeRate, ECVF_SetByProjectSetting);
+
 	FAutoConsoleVariableSink TimeSink(FConsoleCommandDelegate::CreateUObject(this, &ADayNightController::SmoothSinkFunction));
 
 	if (!SmoothTime)
@@ -133,6 +140,7 @@ void ADayNightController::BeginPlay()
 		FTimerDelegate TimerDelegate = FTimerDelegate::CreateUObject(this, &ADayNightController::UpdateSunPositionTimer);
 		GetWorldTimerManager().SetTimer(SteppedTimerHandle, TimerDelegate, SteppedTimeRate, true);
 	}
+	
 }
 
 // Called every frame

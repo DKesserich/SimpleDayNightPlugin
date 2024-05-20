@@ -32,7 +32,7 @@ void FSimple_DayNightModule::StartupModule()
 	// Load the CVar values from DefaultSimpleDayNight.ini
 	UE_LOG(LogTemp, Log, TEXT("Default Engine Ini Name: %s"), *GEngineIni);
 	FString ConfigPath = FPaths::ProjectConfigDir() + "/DefaultSimpleDayNight.ini";
-	UE::ConfigUtilities::ApplyCVarSettingsFromIni(TEXT("/Script/Simple_DayNight.DayNightController"), *ConfigPath, ECVF_SetByProjectSetting);
+	UE::ConfigUtilities::ApplyCVarSettingsFromIni(TEXT("/Script/Simple_DayNight.SimpleDayNightSettings"), *ConfigPath, ECVF_SetByProjectSetting);
 }
 
 void FSimple_DayNightModule::ShutdownModule()

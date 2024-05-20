@@ -69,20 +69,20 @@ public:
 	float TimeOfDay = 6.0f;
 
 	//Number of real-time minutes for 24 hours in-game
-	UPROPERTY(EditAnywhere, Config, meta=(ConsoleVariable="sdn.DayLength"))
+	UPROPERTY(EditAnywhere, Config)
 	float LengthOfDay;
 
 	//Number of in-game days a season lasts
-	UPROPERTY(EditAnywhere, Config, meta=(ConsoleVariable="sdn.SeasonLength"))
+	UPROPERTY(EditAnywhere, Config)
 	float SeasonLength;
 
 	//How many seconds between sun position updates when using stepped sun position updates
-	UPROPERTY(EditAnywhere, Config, meta=(ConsoleVariable="sdn.TimeStep"))
+	UPROPERTY(EditAnywhere, Config)
 	float SteppedTimeRate;
 
 	//Whether to use a Smooth sun position update (update sun position on every frame) or a stepped sun update.
 	//(Due to VSM rebuilds Smooth update can result in a lower average framerate. Stepped update will have higher average framerate, but less consistent frame pacing)
-	UPROPERTY(EditAnywhere, Config, meta=(ConsoleVariable="sdn.SmoothTime"))
+	UPROPERTY(EditAnywhere, Config)
 	bool SmoothTime;
 
 protected:
