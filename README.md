@@ -17,10 +17,10 @@ There are a handful of settings exposed in the Actor class, and a subset of thos
 The settings exposed at the Plugin level are also linked to console variables, which can be changed at runtime.
 
 Those settings are:
-- __Use Smooth Sun Update__: This toggles whether to update the sun's position on tick, or use a stepped update which will update the Sun's position at a configurable interval. This is an optimization setting, as every time the sun's position updates it forces a full rebuild of all Virtual Shadow Maps (if Virtual Shadow Maps are enabled in your project), which can be expensive. Stepped update will usually give a higher average framerate, but can cause some frame pacing issues as the VSM rebuild occurs.
-- __Time Step for Stepped Update__: How many seconds between updates of the Sun's position when Smooth Update is disabled. Use your own judgement on this. Depending on how long you configure the day to be, a high value for this setting can cause some pretty jarring light shifts. The default value is one second.
-- __Length of Day__: How many real-time minutes equal an in-game 24 hour period. Does what it says, really. Higher values equal longer days.
-- __Length of Seasons__: How many in-game days a season lasts. Also pretty much does what it says. A full year is this setting times four.
+- __Use Smooth Sun Update__: (CVar: sdn.SmoothTime) This toggles whether to update the sun's position on tick, or use a stepped update which will update the Sun's position at a configurable interval. This is an optimization setting, as every time the sun's position updates it forces a full rebuild of all Virtual Shadow Maps (if Virtual Shadow Maps are enabled in your project), which can be expensive. Stepped update will usually give a higher average framerate, but can cause some frame pacing issues as the VSM rebuild occurs.
+- __Time Step for Stepped Update__: (CVar: sdn.TimeStep) How many seconds between updates of the Sun's position when Smooth Update is disabled. Use your own judgement on this. Depending on how long you configure the day to be, a high value for this setting can cause some pretty jarring light shifts. The default value is one second.
+- __Length of Day__: (CVar: sdn.DayLength) How many real-time minutes equal an in-game 24 hour period. Does what it says, really. Higher values equal longer days.
+- __Length of Seasons__: (CVar: sdn.SeasonLength) How many in-game days a season lasts. Also pretty much does what it says. A full year is this setting times four.
 
 Other settings:
 - __Latitude__: The latitude of your game world in degrees. Positive values are for the northern hemisphere, negative values for the southern hemisphere. 90 is the North Pole, 0 is the equator. This is exposed to blueprint, so you could potentially do something like change the latitude as the player moves to better simulate a large open world.
