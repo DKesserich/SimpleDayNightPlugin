@@ -34,5 +34,5 @@ This plugin includes the public domain 8K Celestial Coordinate Deep Star Map 202
 
 NASA/Goddard Space Flight Center Scientific Visualization Studio. Gaia DR2: ESA/Gaia/DPAC. Constellation figures based on those developed for the IAU by Alan MacRobert of Sky and Telescope magazine (Roger Sinnott and Rick Fienberg).
 
-Otherwise, where applicable, everything else is copyright David Lejeune, made available under an MIT Open Source License (See License.md)
+Otherwise, where applicable, everything else is copyright David Lejeune, made available under an MIT Open Source License (See License)
 
