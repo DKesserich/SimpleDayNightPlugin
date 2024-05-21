@@ -31,7 +31,7 @@ Other settings:
 __Latitude__ and __Axial Tilt__ are both variables that can be changed in the DefaultSimpleDayNightConfig.ini, but are not linked to console variables, so cannot be changed at runtime without additional scripting (I don't recommend changing Axial Tilt very often at runtime, it'll mix up some of the math).
 
 ## Credits/Licensing
-This plugin includes the public domain 8K Celestial Coordinate Deep Star Map 2020 from the NASA Scientific Visualization Studio (https://svs.gsfc.nasa.gov/4851/#media_group_319116)
+This plugin includes the public domain 4K Celestial Coordinate Deep Star Map 2020 from the NASA Scientific Visualization Studio (https://svs.gsfc.nasa.gov/4851/#media_group_319116). Higher resolutions are available from there. 
 
 NASA/Goddard Space Flight Center Scientific Visualization Studio. Gaia DR2: ESA/Gaia/DPAC. Constellation figures based on those developed for the IAU by Alan MacRobert of Sky and Telescope magazine (Roger Sinnott and Rick Fienberg).
 
