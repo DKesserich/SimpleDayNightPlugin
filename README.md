@@ -11,6 +11,8 @@ Copy the Simple_DayNight folder into your project's Plugins folder. Re-generate 
 
 In-editor, simply drag and drop the DayNightController into your level (or create a blueprint subclass of the DayNightController and drag and drop that into your level).
 
+If using a World Partition level, be sure to disable 'Is Spatially Loaded' on the DayNightController actor.
+
 ### Settings
 
 There are a handful of settings exposed in the Actor class, and a subset of those settings is also exposed in the Simple Day Night System Plugin Settings.
