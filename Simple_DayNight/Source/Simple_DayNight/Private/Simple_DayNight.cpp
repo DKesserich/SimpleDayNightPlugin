@@ -23,7 +23,8 @@
 #include "Simple_DayNight.h"
 
 #include "Misc/ConfigCacheIni.h"
-#include "Misc/ConfigUtilities.h"
+//#include "Misc/ConfigUtilities.h"
+#include "HAL/IConsoleManager.h"
 
 #define LOCTEXT_NAMESPACE "FSimple_DayNightModule"
 
@@ -32,7 +33,7 @@ void FSimple_DayNightModule::StartupModule()
 	// Load the CVar values from DefaultSimpleDayNight.ini
 	UE_LOG(LogTemp, Log, TEXT("Default Engine Ini Name: %s"), *GEngineIni);
 	FString ConfigPath = FPaths::ProjectConfigDir() + "/DefaultSimpleDayNight.ini";
-	UE::ConfigUtilities::ApplyCVarSettingsFromIni(TEXT("/Script/Simple_DayNight.SimpleDayNightSettings"), *ConfigPath, ECVF_SetByProjectSetting);
+	ApplyCVarSettingsFromIni(TEXT("/Script/Simple_DayNight.SimpleDayNightSettings"), *ConfigPath, ECVF_SetByProjectSetting);
 }
 
 void FSimple_DayNightModule::ShutdownModule()

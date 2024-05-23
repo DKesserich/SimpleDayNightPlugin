@@ -57,32 +57,32 @@ public:
 	USkyAtmosphereComponent* Atmosphere;
 
 	//Latitude of the level. Positive for Northern Hemisphere, Negative for Southern
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Config)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Config, meta=(Category="Settings"))
 	float Latitude = 34;
 
 	//Tilt of the planet's axis off the ecliptic. Earth is 23.5 degrees.
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Config)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Config, meta = (Category = "Settings"))
 	float AxialTilt = 23.5;
 
 	//Time of Day in hours. 24hr clock. Defaults to 6am on the day of the Winter Solstice
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (Category = "Settings"))
 	float TimeOfDay = 6.0f;
 
 	//Number of real-time minutes for 24 hours in-game
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, meta = (Category = "Settings"))
 	float LengthOfDay;
 
 	//Number of in-game days a season lasts
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, meta = (Category = "Settings"))
 	float SeasonLength;
 
 	//How many seconds between sun position updates when using stepped sun position updates
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, meta = (Category = "Settings"))
 	float SteppedTimeRate;
 
 	//Whether to use a Smooth sun position update (update sun position on every frame) or a stepped sun update.
 	//(Due to VSM rebuilds Smooth update can result in a lower average framerate. Stepped update will have higher average framerate, but less consistent frame pacing)
-	UPROPERTY(EditAnywhere, Config)
+	UPROPERTY(EditAnywhere, Config, meta = (Category = "Settings"))
 	bool SmoothTime;
 
 protected:

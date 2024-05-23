@@ -28,8 +28,11 @@
 #include "Components/SkyAtmosphereComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 
+#include "TimerManager.h"
+#include "Engine/StaticMesh.h"
+
 #include "Misc/ConfigCacheIni.h"
-#include "Misc/ConfigUtilities.h"
+//#include "Misc/ConfigUtilities.h"
 
 
 static TAutoConsoleVariable<int32> CVarSmoothTime(
