@@ -3,7 +3,7 @@ A plugin for Unreal to implement a simple day/night cycle, complete with seasona
 (this isn't 100% mathematically correct, but it's more than good enough for video games).
 
 ## Requirements
-- Unreal 4.27 or later.
+- Unreal 5.0 or later.
 - Recommended: Enable Virtual Textures
 
 ## Usage
